@@ -11,6 +11,7 @@ function App() {
     <div className="wrapper">
       <Navigation />
       <Banner />
+      <h2>Projects:</h2>
       <Carousel /> 
       <Footer />
     </div>
