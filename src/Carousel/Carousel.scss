@@ -1,0 +1,17 @@
+.carousel {
+  h3 {
+    background: #5f9ea0;
+    color: #fff;
+    font-size: 36px;
+    line-height: 100px;
+    margin: 10px;
+    padding: 2%;
+    position: relative;
+    text-align: center;
+  }
+
+  .slick-prev:before, 
+  .slick-next:before {
+    color: blue;
+  }
+}
