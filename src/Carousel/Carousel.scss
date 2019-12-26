@@ -1,11 +1,12 @@
 .carousel {
-  h3 {
+  .slide {
+    height: 10px;
+    width: 200px;
     background: #5f9ea0;
     color: #fff;
     font-size: 36px;
     line-height: 100px;
     margin: 10px;
-    padding: 2%;
     position: relative;
     text-align: center;
   }
@@ -14,4 +15,39 @@
   .slick-next:before {
     color: blue;
   }
+
+  .box {
+    background-color: green;
+    height: 200px;
+    width: 200px;
+  }
+
+    /* animation */
+    .slide-up {
+      transition: margin-top 1s;
+      margin-top: -300px;
+    }
+  
+    .slide-down {
+      transition: margin-top 1s;
+      margin-top: 0px;
+    }
+  
+    .fade-in-box {
+      transition: opacity 2s;
+      opacity: 1;
+    }
+  
+    .fade-out-box {
+      transition: opacity 1s;
+      opacity: 0;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .show {
+      display: block;
+    }
 }
