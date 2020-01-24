@@ -5,116 +5,125 @@ import 'slick-carousel/slick/slick-theme.scss';
 import 'slick-carousel/slick/slick.css';
 import './Carousel.scss';
 import Logo from '../logo.svg';
+import ArticlePage from '../Images/TD_Ameritrade/Desktop/article-page.png';
+import CarouselPage from '../Images/TD_Ameritrade/Desktop/carousel.png';
+import ModalTable from '../Images/TD_Ameritrade/Desktop/index_option_fees_modal.png';
+import VideoPage from '../Images/TD_Ameritrade/Desktop/video_page.png';
+import MobileArticlePage from '../Images/TD_Ameritrade/Mobile/article_page.png';
+import MobileCarouselPage from '../Images/TD_Ameritrade/Mobile/carousel.png';
 
 export default class Carousel extends Component {
+  constructor() {
+    super()
+    this.state = {
+      left: 0,
+    }
+  }
     render() {
         const settings = {
           dots: true,
           speed: 500,
-          slidesToShow: 5,
+          slidesToShow: 4,
           slidesToScroll: 1
         };
 
-        this.slideImgUp = (e) => {
-          e.preventDefault();
-
-          const target = e.target;
-
-          target.classList.remove('slide-down');
-          target.classList.add('slide-up');
-        }
-
-        this.slideImgDown = (e) => {
-          e.preventDefault();
-
-          const target = e.target;
-          const box = target.querySelector('.box');
-
-          target.classList.remove('slide-up'); 
-          target.classList.add('slide-down'); 
-        }
-
-        this.fadeOutBox = (e) => {
-          e.preventDefault();
-
-          const target = e.target;
-
-          target.classList.remove('fade-in-box');
-          target.classList.add('fade-out-box');
-        }
-
-        this.fadeInBox = (e) => {
-          e.preventDefault();
-
-          const target = e.target;
-
-          target.classList.remove('fade-out-box');
-          target.classList.add('fade-in-box');
-        }
-
         return (
-          <Slider id="container" className="carousel" {...settings}>
-            <article className="slide slide1">
+          <article>
+            <h2>Recent Work:</h2>
+            <Slider id="container" className="carousel" {...settings}>
+              <section className="slide slide1">
               <div className="container">
-                <img src={Logo} width="200px" height="200px" alt="Avatar" className="image"
-                              onMouseLeave={this.slideImgDown}
-                              onMouseOver={this.slideImgUp} />
+                  <img src={ArticlePage} width="400px" height="400px" alt="Avatar" className="image" />
                   <div className="overlay">
-                    <div className="text">Hello World</div>
+                    <section className="text">
+                      <h5>TD Ameritrade:</h5>
+                      <p>
+                        Part of the Education Centre. This is the article page that has a right rail that allows
+                        the user to watch videos and read articles.
+                      </p>
+                      <button type="button" class="btn btn-primary btn-lg">Portfolio</button>
+                    </section>                   
                   </div>
-              </div>
-            </article>
-            <article className="slide slide2">
+                  </div>
+              </section>
+              <section className="slide slide2">
               <div className="container">
-                <img src={Logo} width="200px" height="200px" alt="Avatar" className="image"
-                              onMouseLeave={this.slideImgDown}
-                              onMouseOver={this.slideImgUp} />
+                  <img src={CarouselPage} width="400px" height="400px" alt="Avatar" className="image" />
                   <div className="overlay">
-                    <div className="text">Hello World</div>
-                  </div>
+                    <section className="text">
+                      <h5>TD Ameritrade:</h5>
+                      <p>
+                        Part of the Education Centre. When hovered on the carousel image slides up and a description fades in with a
+                        button to continue to the article or video page.
+                      </p>
+                      <button type="button" class="btn btn-primary btn-lg">Portfolio</button>
+                      </section>                   
+                    </div>
               </div>
-            </article>
-            <article className="slide slide3">
+              </section>
+              <section className="slide slide3">
               <div className="container">
-                <img src={Logo} width="200px" height="200px" alt="Avatar" className="image"
-                              onMouseLeave={this.slideImgDown}
-                              onMouseOver={this.slideImgUp} />
+                  <img src={ModalTable} width="400px" height="400px" alt="Avatar" className="image" />
                   <div className="overlay">
-                    <div className="text">Hello World</div>
+                  <section className="text">
+                  <h5>TD Ameritrade:</h5>
+                      <p>
+                        This is a modal of a table that shows a chart of the index option fees.
+                      </p>
+                      <button type="button" class="btn btn-primary btn-lg">Portfolio</button>
+                      </section>                     
+                      </div>
                   </div>
-              </div>
-            </article>
-            <article className="slide slide4">
+              </section>
+              <section className="slide slide4">
               <div className="container">
-                <img src={Logo} width="200px" height="200px" alt="Avatar" className="image"
-                              onMouseLeave={this.slideImgDown}
-                              onMouseOver={this.slideImgUp} />
+                  <img src={VideoPage} width="400px" height="400px" alt="Avatar" className="image" />
                   <div className="overlay">
-                    <div className="text">Hello World</div>
+                  <section className="text">
+                  <h5>TD Ameritrade:</h5>
+                      <p>
+                        Part of the Education Centre. This is the video page that has a video on top that can be played
+                        and on the bottom a carousel to show related videos.
+                      </p>
+                      <button type="button" class="btn btn-primary btn-lg">Portfolio</button>
+                      </section>  
+                      </div>
                   </div>
-              </div>
-            </article>
-            <article className="slide slide5">
+              </section>
+              <section className="slide slide5">
               <div className="container">
-                <img src={Logo} width="200px" height="200px" alt="Avatar" className="image"
-                              onMouseLeave={this.slideImgDown}
-                              onMouseOver={this.slideImgUp} />
+                  <img src={MobileArticlePage} width="400px" height="400px" alt="Avatar" className="image" />
                   <div className="overlay">
-                    <div className="text">Hello World</div>
+                     <section className="text">
+                     <h5>TD Ameritrade:</h5>
+                      <p>
+                        Part of the Education Centre. Mobile version of the article page. 
+                        This has a hamburger menu on top, a banner below the top, a print option, 
+                        time of the article, and a date that uses moment.js.
+                      </p>
+                      <button type="button" class="btn btn-primary btn-lg">Portfolio</button>
+                      </section>
+                    </div>
                   </div>
-              </div>
-            </article>
-            <article className="slide slide6">
+              </section>
+              <section className="slide slide6">
               <div className="container">
-                <img src={Logo} width="200px" height="200px" alt="Avatar" className="image"
-                              onMouseLeave={this.slideImgDown}
-                              onMouseOver={this.slideImgUp} />
+                  <img src={MobileCarouselPage} width="400px" height="400px" alt="Avatar" className="image" />
                   <div className="overlay">
-                    <div className="text">Hello World</div>
+                  <section className="text">
+                     <h5>TD Ameritrade:</h5>
+                      <p>
+                        Part of the Education Centre. Mobile version of the carousel page. 
+                        This has a search box with a magnifying glass and when clicked on, it opens a search box
+                        to search.
+                      </p>
+                      <button type="button" class="btn btn-primary btn-lg">Portfolio</button>
+                      </section> 
                   </div>
-              </div>
-            </article>
-          </Slider>
+                  </div>
+              </section>
+            </Slider>
+          </article>
         );
       }
 }

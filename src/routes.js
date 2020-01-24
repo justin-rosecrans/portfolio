@@ -14,7 +14,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
   NavLink
 } from "react-router-dom";
 
@@ -69,12 +68,12 @@ export default function BasicExample() {
             <Footer />
           </Route>
           <Route path="/about">
-          <Banner />
+            <Banner />
             <About />
             <Footer />
           </Route>
           <Route path="/dashboard">
-          <Banner />
+            <Banner />
             <Dashboard />
             <Footer />
           </Route>
@@ -90,7 +89,7 @@ export default function BasicExample() {
 function Home() {
   return (
     <div>
-      <h2>Home</h2>
+      {/* <h2>Home</h2> */}
     </div>
   );
 }
