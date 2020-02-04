@@ -37,10 +37,13 @@ export default function BasicExample() {
             <Nav.Link as={NavLink} to='/' exact>Home</Nav.Link>
             <Nav.Link as={NavLink} to='/about'>About</Nav.Link>
             <Nav.Link as={NavLink} to='/dashboard'>Dashboard</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item as={NavLink} to='/about'>About</NavDropdown.Item>
-              <NavDropdown.Item as={NavLink} to='/about'>About</NavDropdown.Item>
-              <NavDropdown.Item as={NavLink} to='/about'>About</NavDropdown.Item>
+            <NavDropdown title="Portfolio" id="basic-nav-dropdown">
+              <NavDropdown.Item as={NavLink} to='/nokia'>Nokia</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to='/analyteHealth'>Analyte Health</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to='/oao'>OAO</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to='/fanatics'>Fanatics</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to='/delphian'>Delphian</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to='/tdAmeritrade'>TD Ameritrade</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item as={NavLink} to='/about'>About</NavDropdown.Item>
             </NavDropdown>
@@ -68,7 +71,25 @@ export default function BasicExample() {
             <Footer />
           </Route>
           <Route path="/about">
-            <Banner />
+            <About />
+            <Footer />
+          </Route>
+          <Route path="/nokia">
+            <About />
+            <Footer />
+          </Route>
+          <Route path="/oao">
+            <About />
+            <Footer />
+          </Route>
+          <Route path="/fanatics">
+            <About />
+            <Footer />
+          </Route>
+          <Route path="/delphian">
+            <Footer />
+          </Route>
+          <Route path="/tdAmeritrade">
             <About />
             <Footer />
           </Route>

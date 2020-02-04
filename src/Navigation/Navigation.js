@@ -20,18 +20,13 @@ class Navigation extends Component {
                         <Nav.Link href="#home">Home</Nav.Link>
                         <Nav.Link href="#link">Link</Nav.Link>
                         <NavDropdown title="Portfolio" id="basic-nav-dropdown">
-                            {/* <NavDropdown.Item> */}
-                                <ul className="navbar-nav mr-auto">
-                                    <li><Link to={'/tdAmeritradePage'} className="nav-link">tdAmeritradePage</Link></li>
-                                </ul>
-                                {/* <Link to='/newPost'>New Post</Link>
-                                <Route path="/newPost" exact component={tdAmeritradePage} /> */}
-
-                            {/* </NavDropdown.Item> */}
-                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                            <NavDropdown.Divider/>
-                            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                            <ul className="navbar-nav mr-auto">
+                                <li><Link to={'/tdAmeritradePage'} className="nav-link">tdAmeritradePage</Link></li>
+                            </ul>
+                        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                        <NavDropdown.Divider/>
+                        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                     <Form inline>

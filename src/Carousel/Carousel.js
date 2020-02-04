@@ -24,8 +24,28 @@ export default class Carousel extends Component {
           dots: true,
           speed: 500,
           slidesToShow: 4,
-          slidesToScroll: 1
-        };
+          slidesToScroll: 1,
+          responsive: [
+            {
+              breakpoint: 440,
+              settings: {
+                slidesToShow: 1,
+              }
+            },
+            {
+              breakpoint: 640,
+              settings: {
+                slidesToShow: 2,
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 3,
+              }
+            }
+         ]
+      };
 
         return (
           <article>
