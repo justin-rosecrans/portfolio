@@ -6,7 +6,7 @@ class Footer extends Component {
         return (
             <section className="footer">
                 <ul>
-                    <li>&copy;	Justin Rosecrans 2020</li>
+                    {/* <li>&copy;	Justin Rosecrans 2020</li> */}
                     <li>Link2</li>
                     <li>Link3</li>
                     <li>Link4</li>

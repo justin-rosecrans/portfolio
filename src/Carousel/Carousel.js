@@ -11,6 +11,7 @@ import ModalTable from '../Images/TD_Ameritrade/Desktop/index_option_fees_modal.
 import VideoPage from '../Images/TD_Ameritrade/Desktop/video_page.png';
 import MobileArticlePage from '../Images/TD_Ameritrade/Mobile/article_page.png';
 import MobileCarouselPage from '../Images/TD_Ameritrade/Mobile/carousel.png';
+import { Link } from 'react-router-dom'
 
 export default class Carousel extends Component {
   constructor() {
@@ -61,7 +62,9 @@ export default class Carousel extends Component {
                         Part of the Education Centre. This is the article page that has a right rail that allows
                         the user to watch videos and read articles.
                       </p>
-                      <button type="button" class="btn btn-primary btn-lg">Portfolio</button>
+                      <Link to="/tdAmeritrade">
+                        <button type="button" className="btn btn-primary btn-lg">Portfolio</button>
+                      </Link>
                     </section>                   
                   </div>
                   </div>
@@ -76,9 +79,11 @@ export default class Carousel extends Component {
                         Part of the Education Centre. When hovered on the carousel image slides up and a description fades in with a
                         button to continue to the article or video page.
                       </p>
-                      <button type="button" class="btn btn-primary btn-lg">Portfolio</button>
-                      </section>                   
-                    </div>
+                      <Link to="/tdAmeritrade">
+                        <button type="button" className="btn btn-primary btn-lg">Portfolio</button>
+                      </Link>                      
+                    </section>                   
+                  </div>
               </div>
               </section>
               <section className="slide slide3">
@@ -90,9 +95,11 @@ export default class Carousel extends Component {
                       <p>
                         This is a modal of a table that shows a chart of the index option fees.
                       </p>
-                      <button type="button" class="btn btn-primary btn-lg">Portfolio</button>
-                      </section>                     
-                      </div>
+                      <Link to="/tdAmeritrade">
+                        <button type="button" className="btn btn-primary btn-lg">Portfolio</button>
+                      </Link>                      
+                    </section>                     
+                    </div>
                   </div>
               </section>
               <section className="slide slide4">
@@ -105,9 +112,11 @@ export default class Carousel extends Component {
                         Part of the Education Centre. This is the video page that has a video on top that can be played
                         and on the bottom a carousel to show related videos.
                       </p>
-                      <button type="button" class="btn btn-primary btn-lg">Portfolio</button>
-                      </section>  
-                      </div>
+                      <Link to="/tdAmeritrade">
+                        <button type="button" className="btn btn-primary btn-lg">Portfolio</button>
+                      </Link>                      
+                    </section>  
+                  </div>
                   </div>
               </section>
               <section className="slide slide5">
@@ -121,9 +130,11 @@ export default class Carousel extends Component {
                         This has a hamburger menu on top, a banner below the top, a print option, 
                         time of the article, and a date that uses moment.js.
                       </p>
-                      <button type="button" class="btn btn-primary btn-lg">Portfolio</button>
-                      </section>
-                    </div>
+                      <Link to="/tdAmeritrade">
+                        <button type="button" className="btn btn-primary btn-lg">Portfolio</button>
+                      </Link>                      
+                    </section>
+                  </div>
                   </div>
               </section>
               <section className="slide slide6">
@@ -137,8 +148,10 @@ export default class Carousel extends Component {
                         This has a search box with a magnifying glass and when clicked on, it opens a search box
                         to search.
                       </p>
-                      <button type="button" class="btn btn-primary btn-lg">Portfolio</button>
-                      </section> 
+                      <Link to="/tdAmeritrade">
+                        <button type="button" className="btn btn-primary btn-lg">Portfolio</button>
+                      </Link>                      
+                    </section> 
                   </div>
                   </div>
               </section>

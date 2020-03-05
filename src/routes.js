@@ -8,6 +8,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
+import Nokia from './Nokia/Nokia';
 import '../node_modules/bootstrap/scss/bootstrap.scss';
 import './Navigation/Navigation.scss';
 import {
@@ -76,6 +77,7 @@ export default function BasicExample() {
           </Route>
           <Route path="/nokia">
             <About />
+            <Nokia />
             <Footer />
           </Route>
           <Route path="/oao">
