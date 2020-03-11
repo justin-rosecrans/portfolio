@@ -51,6 +51,57 @@ export function register(config) {
         registerValidSW(swUrl, config);
       }
     });
+  } else {
+    /* eslint-disable-next-line no-restricted-globals */
+    self.addEventListener('install', function(event) {
+      console.log('[Service Worker] Installing Service Worker ...', event);
+      // event.waitUntil(
+      //   caches.open('static')
+      //     .then(function(cache) {
+      //       console.log('[Service Worker] Precaching App Shell');
+      //       cache.add('/src/js/app.js')
+      //     })
+      // )
+    });
+    /* eslint-disable-next-line no-restricted-globals */
+    self.addEventListener('activate', function(event) {
+      console.log('[Service Worker] Activating Service Worker ....', event);
+      /* eslint-disable-next-line no-restricted-globals */
+      return self.clients.claim();
+    });
+
+    /* eslint-disable-next-line no-restricted-globals */
+    self.addEventListener('fetch', function(event) {
+      event.respondWith(fetch(event.request));
+    });
+    // window.addEventListener('install', (event) => {
+    //   console.log('Installing Service Worker!', event);
+    // });
+
+    // if ('serviceWorker' in navigator) {
+    //   console.log('CLIENT: service worker registration in progress.');
+    //   navigator.serviceWorker.register('/service-worker.js').then(function() {
+    //     console.log('CLIENT: service worker registration complete.');
+    //   }, function() {
+    //     console.log('CLIENT: service worker registration failure.');
+    //   });
+    // } else {
+    //   console.log('CLIENT: service worker is not supported.');
+    // }
+
+// window.self.addEventListener('install', function(event) {
+//   console.log('[Service Worker] Installing Service Worker ...', event);
+// });
+
+// window.self.addEventListener('activate', function(event) {
+//   console.log('[Service Worker] Activating Service Worker ...', event);
+//   return window.self.clients.claim();
+// });
+
+// window.self.addEventListener('fetch', function(event) {
+//   console.log('[Service Worker] Fetching something ....', event);
+//   event.respondWith(fetch(event.request));
+// });
   }
 }
 
