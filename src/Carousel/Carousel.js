@@ -48,8 +48,8 @@ export default class Carousel extends Component {
       };
 
         return (
-          <article>
-            <h2>Recent Work:</h2>
+          <article class='carousel-container'>
+            <h3>Recent Work:</h3>
             <Slider id="container" className="carousel" {...settings}>
               <section className="slide slide1">
               <div className="container">

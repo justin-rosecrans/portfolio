@@ -9,6 +9,16 @@
     opacity: 0.95;
     // animation: shake 0.5s;
     // animation-iteration-count: 2;
+
+    .text {
+      text-align: center;
+    }
+
+    .bioPicture {
+      border-radius: 100px;
+      display: block;
+      margin: 0 auto;
+    }
   }
   
   /* Standard syntax */
