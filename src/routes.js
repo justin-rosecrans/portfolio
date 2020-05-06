@@ -17,6 +17,7 @@ import {
   Route,
   NavLink
 } from "react-router-dom";
+import Logo from '../src/Images/logo.svg';
 
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
@@ -31,7 +32,9 @@ export default function BasicExample() {
   return (
     <Router>
       <Navbar bg="light" expand="lg">
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand href="#home">
+          <img alt='logo' src={Logo} width='50px' height='50px' />
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">

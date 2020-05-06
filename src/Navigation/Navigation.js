@@ -7,7 +7,7 @@ import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import components from '../Pages/components';
-import './Navigation.scss'
+import './Navigation.scss';
 
 class Navigation extends Component {
     render() {

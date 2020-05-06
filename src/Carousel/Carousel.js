@@ -4,7 +4,6 @@ import 'react-slick/dist/react-slick.min';
 import 'slick-carousel/slick/slick-theme.scss';
 import 'slick-carousel/slick/slick.css';
 import './Carousel.scss';
-import Logo from '../logo.svg';
 import ArticlePage from '../Images/TD_Ameritrade/Desktop/article-page.png';
 import CarouselPage from '../Images/TD_Ameritrade/Desktop/carousel.png';
 import ModalTable from '../Images/TD_Ameritrade/Desktop/index_option_fees_modal.png';
