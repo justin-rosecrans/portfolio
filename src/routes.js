@@ -9,6 +9,7 @@ import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 import Nokia from './Nokia/Nokia';
+import TDAmeritrade from './TDAmeritrade/TDAmeritrade';
 import '../node_modules/bootstrap/scss/bootstrap.scss';
 import './Navigation/Navigation.scss';
 import {
@@ -95,7 +96,7 @@ export default function BasicExample() {
             <Footer />
           </Route>
           <Route path="/tdAmeritrade">
-            <About />
+            <TDAmeritrade />
             <Footer />
           </Route>
           <Route path="/dashboard">

@@ -1,12 +1,16 @@
 .footer {
-    background-color: #4b4bff;
-    border-radius: 10px;
     box-sizing: border-box;
+    border-top: 1px solid #ededed;
 
     ul {
-        color: #FFF;
         display: flex;
         justify-content: center;
         list-style: none;
+        padding-top: 1rem;
+    }
+
+    li {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }

@@ -6,7 +6,7 @@ class Banner extends Component {
     render() {
         return (
             <article className="banner">
-                <section class='text'>
+                <section className='text'>
                     <h1>Welcome to Justin Rosecrans' Portfolio</h1>
                     <h2>
                         UI/Front End Developer
@@ -15,8 +15,8 @@ class Banner extends Component {
                         I have over 8 years of experience in javascript, CSS, and HTML.
                     </p>
                 </section>
-                <section class='bio-image'>
-                    <img class='bioPicture' alt='bioPicture' src={ProfilePic} width='150px' height='150px' />
+                <section className='bio-image'>
+                    <img className='bioPicture' alt='bioPicture' src={ProfilePic} width='150px' height='150px' />
                 </section>
             </article>
         )
