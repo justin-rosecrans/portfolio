@@ -1729,13 +1729,8 @@ acorn-walk@^6.0.1:
 
 acorn@^5.5.3:
   version "5.7.4"
-<<<<<<< HEAD
   resolved "https://artifactory.associatesys.local:443/artifactory/api/npm/npm-virtual/acorn/-/acorn-5.7.4.tgz#3e8d8a9947d0599a1796d10225d7432f4a4acf5e"
   integrity sha1-Po2KmUfQWZoXltECJddDL0pKz14=
-=======
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.7.4.tgz#3e8d8a9947d0599a1796d10225d7432f4a4acf5e"
-  integrity sha512-1D++VG7BhrtvQpNbBzovKNc1FLGGEE/oGe7b9xJm/RFHMBeUaUGpluV9RLjZa47YFdPcDAenEYuq9pQPcMdLJg==
->>>>>>> 3cd965b306cada37b75fccc650cc1989213a97d3
 
 acorn@^6.0.1, acorn@^6.0.4, acorn@^6.2.1:
   version "6.4.1"
