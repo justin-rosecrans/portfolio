@@ -10,8 +10,10 @@ import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 import Nokia from './Nokia/Nokia';
 import TDAmeritrade from './TDAmeritrade/TDAmeritrade';
+import Fanatics from './Fanatics/Fanatics'
 import '../node_modules/bootstrap/scss/bootstrap.scss';
 import './Navigation/Navigation.scss';
+import '../src/'
 import {
   BrowserRouter as Router,
   Switch,
@@ -72,7 +74,13 @@ export default function BasicExample() {
           <Route exact path="/">
             <Banner />
             <Home />
-            <Carousel />
+            <Carousel
+              imageOne={'article-page-img'}
+              imageTwo={'carousel-img'}
+              imageThree={'modal-table'}
+              imageFour={'video-page-img'}
+              imageFive={'education-centre-top'}
+              imageSix={'upload-files'}/>
             <Footer />
           </Route>
           <Route path="/about">
@@ -80,26 +88,75 @@ export default function BasicExample() {
             <Footer />
           </Route>
           <Route path="/nokia">
+            <Carousel
+              hideLink={true}
+              imageOne={'article-page-img'}
+              imageTwo={'carousel-img'}
+              imageThree={'modal-table'}
+              imageFour={'video-page-img'}
+              imageFive={'education-centre-top'}
+              imageSix={'upload-files'}/>
             <About />
             <Nokia />
             <Footer />
           </Route>
           <Route path="/oao">
+          <Carousel
+              hideLink={true}
+              imageOne={'article-page-img'}
+              imageTwo={'carousel-img'}
+              imageThree={'modal-table'}
+              imageFour={'video-page-img'}
+              imageFive={'education-centre-top'}
+              imageSix={'upload-files'}/>
             <About />
             <Footer />
           </Route>
           <Route path="/fanatics">
-            <About />
+          <WorkHistory />
+          <Carousel
+              hideLink={true}
+              imageOne={'fanatics-banner-page'}
+              imageTwo={'fanatics-nfl-page'}
+              imageThree={'fanatics-countdown-timer'}
+              imageFour={'fanatics-player-page'}
+              imageFive={'fanatics-fans-edge-site'}
+              imageSix={'fanatics-social-page'}/>
+            <Fanatics />
             <Footer />
           </Route>
           <Route path="/delphian">
+          <Carousel
+              hideLink={true}
+              imageOne={'article-page-img'}
+              imageTwo={'carousel-img'}
+              imageThree={'modal-table'}
+              imageFour={'video-page-img'}
+              imageFive={'education-centre-top'}
+              imageSix={'upload-files'}/>
             <Footer />
           </Route>
           <Route path="/tdAmeritrade">
+          <Carousel
+              hideLink={true}
+              imageOne={'article-page-img'}
+              imageTwo={'carousel-img'}
+              imageThree={'modal-table'}
+              imageFour={'video-page-img'}
+              imageFive={'education-centre-top'}
+              imageSix={'upload-files'}/>
             <TDAmeritrade />
             <Footer />
           </Route>
           <Route path="/dashboard">
+          <Carousel
+              hideLink={true}
+              imageOne={'article-page-img'}
+              imageTwo={'carousel-img'}
+              imageThree={'modal-table'}
+              imageFour={'video-page-img'}
+              imageFive={'education-centre-top'}
+              imageSix={'upload-files'}/>
             <Banner />
             <Dashboard />
             <Footer />
@@ -117,6 +174,14 @@ function Home() {
   return (
     <div>
       {/* <h2>Home</h2> */}
+    </div>
+  );
+}
+
+function WorkHistory() {
+  return (
+    <div className="title-top">
+      <h2>WorkHistory</h2>
     </div>
   );
 }

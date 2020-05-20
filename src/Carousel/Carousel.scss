@@ -95,6 +95,36 @@
         background-image: url('../Images/TD_Ameritrade/Desktop/video_page.png');
         @include carousel-img-styles;
       }
+
+      .fanatics-banner-page {
+        background-image: url('../Images/fanatics/fanatics-banner.png');
+        @include carousel-img-styles;
+      }
+
+      .fanatics-nfl-page {
+        background-image: url('../Images/fanatics/fanatics-nfl-page.jpeg');
+        @include carousel-img-styles;
+      }
+
+      .fanatics-player-page {
+        background-image: url('../Images/fanatics/fanatics-player-page.png');
+        @include carousel-img-styles;
+      }
+
+      .fanatics-social-page {
+        background-image: url('../Images/fanatics/fanatics-social-page.png');
+        @include carousel-img-styles;
+      }
+
+      .fanatics-countdown-timer {
+        background-image: url('../Images/fanatics/fanatics-countdown-timer.png');
+        @include carousel-img-styles;
+      }
+
+      .fanatics-fans-edge-site {
+        background-image: url('../Images/fanatics/fanatics-fans-edge-site.png');
+        @include carousel-img-styles;
+      }
     }
   }
 }

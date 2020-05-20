@@ -6,11 +6,41 @@ import 'slick-carousel/slick/slick.css';
 import './Carousel.scss';
 import { Link } from 'react-router-dom'
 
+function ShowSlideWithoutLink(props) {
+  return(
+    <section className="slide slide1">
+      <article className="showModal">
+        <div alt="Avatar" className={`image ${props.slideClass}`}></div>                 
+      </article>
+    </section>
+  )
+}
+
+function ShowSlideWithLink(props) {
+  if(!props.hideLink) {
+    return(
+      <section className="slide slide1">
+        <Link to="/tdAmeritrade">
+          <div alt="Avatar" className={`image ${props.slideClass}`}></div>                 
+        </Link>
+      </section>
+    )
+  } else {
+    return ShowSlideWithoutLink(props);
+  }
+}
+
 export default class Carousel extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super();
     this.state = {
-      left: 0,
+        'hideLink': props.hideLink,
+        'slideOne': props.imageOne,
+        'slideTwo': props.imageTwo,
+        'slideThree': props.imageThree,
+        'slideFour': props.imageFour,
+        'slideFive': props.imageFive,
+        'slideSix': props.imageSix
     }
   }
     render() {
@@ -44,30 +74,13 @@ export default class Carousel extends Component {
         return (
           <article className='carousel-container'>
             {/* Use CSS Cover to make all the images the same size */}
-            <h3>Recent Work:</h3>
             <Slider id="container" className="carousel" {...settings}>
-              <section className="slide slide1">
-              <Link to="/tdAmeritrade">
-                  <div alt="Avatar" className="image article-page-img"></div>                 
-              </Link>
-              </section>
-              <section className="slide slide2">
-              <Link to="/tdAmeritrade">
-                  <div alt="Avatar" className="image carousel-img"></div>                 
-              </Link>                      
-              </section>
-              <section className="slide slide3">
-              <div alt="Avatar" className="image modal-table"></div>                 
-              </section>
-              <section className="slide slide4">
-              <div alt="Avatar" className="image video-page-img"></div>                 
-              </section>
-              <section className="slide slide5">
-              <div alt="Avatar" className="image education-centre-top"></div>                 
-              </section>
-              <section className="slide slide6">
-              <div alt="Avatar" className="image upload-files"></div>                 
-              </section>
+              <ShowSlideWithLink slideClass={this.state.slideOne} hideLink={this.state.hideLink} />
+              <ShowSlideWithLink slideClass={this.state.slideTwo} hideLink={this.state.hideLink} />
+              <ShowSlideWithLink slideClass={this.state.slideThree} hideLink={this.state.hideLink} />
+              <ShowSlideWithLink slideClass={this.state.slideFour} hideLink={this.state.hideLink} />
+              <ShowSlideWithLink slideClass={this.state.slideFive} hideLink={this.state.hideLink} />
+              <ShowSlideWithLink slideClass={this.state.slideSix} hideLink={this.state.hideLink} />
             </Slider>
           </article>
         );

@@ -12,7 +12,7 @@ class Banner extends Component {
                         UI/Front End Developer
                     </h2>
                     <p>
-                        I have over 8 years of experience in javascript, CSS, and HTML.
+                        I have over 8 years of experience in JavaScript, CSS, and HTML.
                     </p>
                 </section>
                 <section className='bio-image'>
