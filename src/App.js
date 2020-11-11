@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
+import '../node_modules/bootstrap/scss/bootstrap.scss';
+import 'react-bootstrap';
 import './App.css';
-import 'react-bootstrap'
+import Route from './routes';
 
 class App extends Component {
   render() {
     return (
-      <div className="wrapper">
-      </div>
+      <Route />
     );
   }
 }

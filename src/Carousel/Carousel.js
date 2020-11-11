@@ -17,6 +17,12 @@ function ShowSlideWithoutLink(props) {
 }
 
 function ShowSlideWithLink(props) {
+  if(!props.slideClass) {
+    console.log('props', props);
+    props.style.display='none';
+    return null;
+  }
+
   if(!props.hideLink) {
     return(
       <section className="slide slide1">
@@ -32,17 +38,14 @@ function ShowSlideWithLink(props) {
 
 export default class Carousel extends Component {
   constructor(props) {
+    console.log('props1', props);
     super();
-    this.state = {
-        'hideLink': props.hideLink,
-        'slideOne': props.imageOne,
-        'slideTwo': props.imageTwo,
-        'slideThree': props.imageThree,
-        'slideFour': props.imageFour,
-        'slideFive': props.imageFive,
-        'slideSix': props.imageSix
-    }
   }
+
+  componentDidMount() {
+    console.log('test', this);
+  }
+
     render() {
         const settings = {
           dots: true,
@@ -75,12 +78,13 @@ export default class Carousel extends Component {
           <article className='carousel-container'>
             {/* Use CSS Cover to make all the images the same size */}
             <Slider id="container" className="carousel" {...settings}>
-              <ShowSlideWithLink slideClass={this.state.slideOne} hideLink={this.state.hideLink} />
-              <ShowSlideWithLink slideClass={this.state.slideTwo} hideLink={this.state.hideLink} />
-              <ShowSlideWithLink slideClass={this.state.slideThree} hideLink={this.state.hideLink} />
-              <ShowSlideWithLink slideClass={this.state.slideFour} hideLink={this.state.hideLink} />
-              <ShowSlideWithLink slideClass={this.state.slideFive} hideLink={this.state.hideLink} />
-              <ShowSlideWithLink slideClass={this.state.slideSix} hideLink={this.state.hideLink} />
+              {/* <ShowSlideWithLink slideClass={this.props.images} hideLink={this.props.hideLink} /> */}
+              <ShowSlideWithLink slideClass={this.props.imageOne} hideLink={this.props.hideLink} />
+              <ShowSlideWithLink slideClass={this.props.imageTwo} hideLink={this.props.hideLink} />
+              <ShowSlideWithLink slideClass={this.props.imageThree} hideLink={this.props.hideLink} />
+              <ShowSlideWithLink slideClass={this.props.imageFour} hideLink={this.props.hideLink} />
+              <ShowSlideWithLink slideClass={this.props.imageFive} hideLink={this.props.hideLink} />
+              <ShowSlideWithLink slideClass={this.props.imageSix} hideLink={this.props.hideLink} />
             </Slider>
           </article>
         );

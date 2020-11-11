@@ -10,9 +10,10 @@ import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 import Nokia from './Nokia/Nokia';
 import TDAmeritrade from './TDAmeritrade/TDAmeritrade';
-import Fanatics from './Fanatics/Fanatics'
-import '../node_modules/bootstrap/scss/bootstrap.scss';
-import './Navigation/Navigation.scss';
+import Fanatics from './Fanatics/Fanatics';
+import AnalyteHealth from './AnalyteHealth/AnalyteHealth';
+import OAO from './OAO/OAO';
+import Delphian from './Delphian/Delphian';
 import '../src/'
 import {
   BrowserRouter as Router,
@@ -21,6 +22,7 @@ import {
   NavLink
 } from "react-router-dom";
 import Logo from '../src/Images/logo.svg';
+import ReduxPlayground from "./ReduxPlayground/ReduxPlayground";
 
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
@@ -31,11 +33,11 @@ import Logo from '../src/Images/logo.svg';
 // making sure things like the back button and bookmarks
 // work properly.
 
-export default function BasicExample() {
+export default function() {
   return (
     <Router>
       <Navbar bg="light" expand="lg">
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="./">
           <img alt='logo' src={Logo} width='50px' height='50px' />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -43,7 +45,7 @@ export default function BasicExample() {
           <Nav className="mr-auto">
             <Nav.Link as={NavLink} to='/' exact>Home</Nav.Link>
             <Nav.Link as={NavLink} to='/about'>About</Nav.Link>
-            <Nav.Link as={NavLink} to='/dashboard'>Dashboard</Nav.Link>
+            <Nav.Link as={NavLink} to='/reduxPlayground'>Redux Playground</Nav.Link>
             <NavDropdown title="Portfolio" id="basic-nav-dropdown">
               <NavDropdown.Item as={NavLink} to='/nokia'>Nokia</NavDropdown.Item>
               <NavDropdown.Item as={NavLink} to='/analyteHealth'>Analyte Health</NavDropdown.Item>
@@ -54,6 +56,7 @@ export default function BasicExample() {
               <NavDropdown.Divider />
               <NavDropdown.Item as={NavLink} to='/about'>About</NavDropdown.Item>
             </NavDropdown>
+            <Nav.Link as={NavLink} to='/' exact>Resume</Nav.Link>
           </Nav>
           <Form inline>
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
@@ -88,28 +91,39 @@ export default function BasicExample() {
             <Footer />
           </Route>
           <Route path="/nokia">
+            <WorkHistory />
             <Carousel
-              hideLink={true}
-              imageOne={'article-page-img'}
-              imageTwo={'carousel-img'}
-              imageThree={'modal-table'}
-              imageFour={'video-page-img'}
-              imageFive={'education-centre-top'}
-              imageSix={'upload-files'}/>
+              imageOne={'nokia-cart'}
+              imageTwo={'nokia-home'}
+              imageThree={'nokia-product-page'}
+              imageFour={'nokia-checkout-page'}
+              imageFive={'nokia-order-history-page'}
+              imageSix={'nokia-shipping-page'}/>
             <About />
             <Nokia />
             <Footer />
           </Route>
+          <Route path="/analyteHealth">
+            <WorkHistory />
+            <Carousel
+              hideLink={true}
+              imageOne={'analyte-health-img1'}
+              imageTwo={'analyte-health-img2'}
+              imageThree={'analyte-health-img3'}
+              imageFour={'analyte-health-img4'}
+              imageFive={'analyte-health-img5'} />
+            <About />
+            <AnalyteHealth />
+            <Footer />
+          </Route>
           <Route path="/oao">
+          <WorkHistory />
           <Carousel
               hideLink={true}
-              imageOne={'article-page-img'}
-              imageTwo={'carousel-img'}
-              imageThree={'modal-table'}
-              imageFour={'video-page-img'}
-              imageFive={'education-centre-top'}
-              imageSix={'upload-files'}/>
+              imageOne={'oao-filter-menu-1'}
+              imageTwo={'oao-filter-menu-2'} />
             <About />
+            <OAO />
             <Footer />
           </Route>
           <Route path="/fanatics">
@@ -126,25 +140,28 @@ export default function BasicExample() {
             <Footer />
           </Route>
           <Route path="/delphian">
+          <WorkHistory />
           <Carousel
               hideLink={true}
-              imageOne={'article-page-img'}
-              imageTwo={'carousel-img'}
-              imageThree={'modal-table'}
-              imageFour={'video-page-img'}
-              imageFive={'education-centre-top'}
-              imageSix={'upload-files'}/>
+              imageOne={'delphian-access-checker'}
+              imageTwo={'delphian-dynamic-dropdown'}
+              imageThree={'delphian-events-menu'}
+              imageFour={'delphian-mobile-account-management'}
+              imageFive={''}
+              imageSix={''}/>
+            <Delphian />
             <Footer />
           </Route>
           <Route path="/tdAmeritrade">
+          <WorkHistory />
           <Carousel
               hideLink={true}
-              imageOne={'article-page-img'}
-              imageTwo={'carousel-img'}
-              imageThree={'modal-table'}
-              imageFour={'video-page-img'}
-              imageFive={'education-centre-top'}
-              imageSix={'upload-files'}/>
+              imageOne={'td-ameritrade-article-page-img'}
+              imageTwo={'td-ameritrade-carousel-img'}
+              imageThree={'td-ameritrade-education-centre-top'}
+              imageFour={'td-ameritrade-upload-files'}
+              imageFive={'td-ameritrade-modal-table'}
+              imageSix={'td-ameritrade-video-page-img'}/>
             <TDAmeritrade />
             <Footer />
           </Route>
@@ -158,7 +175,10 @@ export default function BasicExample() {
               imageFive={'education-centre-top'}
               imageSix={'upload-files'}/>
             <Banner />
-            <Dashboard />
+            <Footer />
+          </Route>
+          <Route path="/reduxPlayground">
+            <ReduxPlayground />
             <Footer />
           </Route>
         </Switch>
@@ -172,8 +192,8 @@ export default function BasicExample() {
 
 function Home() {
   return (
-    <div>
-      {/* <h2>Home</h2> */}
+    <div className="title-top">
+      <h2>Recent Work History</h2>
     </div>
   );
 }
@@ -181,7 +201,7 @@ function Home() {
 function WorkHistory() {
   return (
     <div className="title-top">
-      <h2>WorkHistory</h2>
+      <h2>Work History</h2>
     </div>
   );
 }
@@ -190,14 +210,6 @@ function About() {
   return (
     <div>
       <h2>About</h2>
-    </div>
-  );
-}
-
-function Dashboard() {
-  return (
-    <div>
-      <h2>Dashboard</h2>
     </div>
   );
 }

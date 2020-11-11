@@ -3,14 +3,14 @@
     border-top: 1px solid #ededed;
 
     ul {
-        display: flex;
-        justify-content: center;
         list-style: none;
         padding-top: 1rem;
+        text-align: center;
     }
 
     li {
         padding-left: 1rem;
         padding-right: 1rem;
+        display: inline-block;
     }
 }

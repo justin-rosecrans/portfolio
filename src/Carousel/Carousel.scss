@@ -4,6 +4,10 @@
   cursor: pointer;
 }
 
+.hide {
+  display: none;
+}
+
 .carousel-container {
   margin: 3rem 1rem;
 
@@ -66,32 +70,57 @@
         text-align: center;
       }
 
-      .article-page-img {
+      .analyte-health-img1 {
+        background-image: url('../Images/Analyte_Health/Checkout.jpg');
+        @include carousel-img-styles;
+      }
+
+      .analyte-health-img2 {
+        background-image: url('../Images/Analyte_Health/Homepage-center.jpg');
+        @include carousel-img-styles;
+      }
+
+      .analyte-health-img3 {
+        background-image: url('../Images/Analyte_Health/Homepage-top.jpg');
+        @include carousel-img-styles;
+      }
+
+      .analyte-health-img4 {
+        background-image: url('../Images/Analyte_Health/Map.jpg');
+        @include carousel-img-styles;
+      }
+
+      .analyte-health-img5 {
+        background-image: url('../Images/Analyte_Health/Test_panel.jpg');
+        @include carousel-img-styles;
+      }
+
+      .td-ameritrade-article-page-img {
         background-image: url('../Images/TD_Ameritrade/Desktop/article-page.png');
         @include carousel-img-styles;
       }
 
-      .carousel-img {
+      .td-ameritrade-carousel-img {
         background-image: url('../Images/TD_Ameritrade/Desktop/carousel.png');
         @include carousel-img-styles;
       }
 
-      .education-centre-top {
+      .td-ameritrade-education-centre-top {
         background-image: url('../Images/TD_Ameritrade/Desktop/education-centre-top.png');
         @include carousel-img-styles;
       }
 
-      .upload-files {
+      .td-ameritrade-upload-files {
         background-image: url('../Images/TD_Ameritrade/Desktop/uploadFiles.png');
         @include carousel-img-styles;
       }
 
-      .modal-table {
+      .td-ameritrade-modal-table {
         background-image: url('../Images/TD_Ameritrade/Desktop/index_option_fees_modal.png');
         @include carousel-img-styles;
       }
 
-      .video-page-img {
+      .td-ameritrade-video-page-img {
         background-image: url('../Images/TD_Ameritrade/Desktop/video_page.png');
         @include carousel-img-styles;
       }
@@ -123,6 +152,66 @@
 
       .fanatics-fans-edge-site {
         background-image: url('../Images/fanatics/fanatics-fans-edge-site.png');
+        @include carousel-img-styles;
+      }
+
+      .nokia-cart {
+        background-image: url('../Images//Nokia/gm/cart.jpg');
+        @include carousel-img-styles;
+      }
+
+      .nokia-home {
+        background-image: url('../Images//Nokia/gm/home.jpg');
+        @include carousel-img-styles;
+      }
+
+      .nokia-product-page {
+        background-image: url('../Images/Nokia/gm/m-product.jpg');
+        @include carousel-img-styles;
+      }
+
+      .nokia-checkout-page {
+        background-image: url('../Images/Nokia/honda/checkout.jpg');
+        @include carousel-img-styles;
+      }
+
+      .nokia-order-history-page {
+        background-image: url('../Images/Nokia/Hyundai/order-history.jpg');
+        @include carousel-img-styles;
+      }
+
+      .nokia-shipping-page {
+        background-image: url('../Images/Nokia/Hyundai/shipping.jpg');
+        @include carousel-img-styles;
+      }
+
+      .delphian-access-checker {
+        background-image: url('../Images/Delphian/AccessChecker.JPG');
+        @include carousel-img-styles;
+      }
+
+      .delphian-dynamic-dropdown {
+        background-image: url('../Images/Delphian/dynamic_drop_down.png');
+        @include carousel-img-styles;
+      }
+
+      .delphian-events-menu {
+        background-image: url('../Images/Delphian/eventsMenu.JPG');
+        @include carousel-img-styles;
+      }
+
+      .delphian-mobile-account-management {
+        background-image: url('../Images/Delphian/mobileAccountManagement.JPG');
+        @include carousel-img-styles;
+      }
+
+      .oao-filter-menu-1 {
+        background-image: url('../Images/OAO/Filter_Menu1.png');
+        @include carousel-img-styles;
+      }
+
+      .oao-filter-menu-2 {
+        background-image: url('../Images/OAO/Filter_Menu2.png');
         @include carousel-img-styles;
       }
     }

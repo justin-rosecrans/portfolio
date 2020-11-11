@@ -1,14 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './Footer.scss';
 
-function Footer() {
-    // Used hook instead of Class for the state.
-    const [counter, incrementCounter] = useState(0)
-  
-    function handleIncrement() {
-      incrementCounter(counter + 1)
-    }
-
+function Footer(props) {
     return (
         <section className="footer">
             <ul>
@@ -20,14 +13,8 @@ function Footer() {
             </ul>
 
             <hr />
-
-            <div>
-                <div>{counter}</div>
-                <hr />
-                <button type="button" onClick={handleIncrement}>+</button>
-            </div>
         </section>
     )
-  }
+}
 
 export default Footer;
